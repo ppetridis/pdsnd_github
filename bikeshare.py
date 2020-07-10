@@ -17,32 +17,30 @@ def get_filters():
     """
     print('Hello! Let\'s explore some US bikeshare data!')
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
-    while True:
+    cities = ['chicago','new york city','washington']
+    city = ''
+    while city not in cities:
         city = input("Would you like to see data from Chicago, New York City or Washington?\n").lower()
-        if city in ('chicago','new york city', 'washington'):
-            break
-        else:
+        if city not in cities:
             print("That's not one of the options - check your city name and try again!\n")
     # TO DO: get user input for month (all, january, february, ... , june)
     month_or_day = input("Would you like to filter the data by month, day, or neither?\n").lower()
     month = 'all'
     day = 'all'
     if month_or_day == 'month':
-        while True:
+        months = ['january','february','march','april','may','june']
+        month = ''
+        while month not in months:
             month = input("Which month's data would you like to see? Please choose a month between January and June:\n").lower()
-            months = ['january','february','march','april','may','june']
-            if month in months:
-                break
-            else:
+            if month not in months:
                 print("You may have spelled it wrong or picked a month outside the range. Try again!\n")
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     elif month_or_day == 'day':
-        while True:
+        days = ['monday','tuesday','wednesday','thursday','friday','saturday','sunday']
+        day = ''
+        while day not in days:
             day = input("Which day's data would you like to see? Please type the full day name:\n").lower()
-            days = ['monday','tuesday','wednesday','thursday','friday','saturday','sunday']
-            if day in days:
-                break
-            else:
+            if day not in days:
                 print("You may have spelled it wrong or written it incorrectly. Try again!\n")
 
     print (city, ' ', month, ' ', day)
