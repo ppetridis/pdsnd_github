@@ -1,5 +1,5 @@
 ### Date created
-This project was created on 9 July, 2020.
+This project was initially created on 21 June, 2020. It was uploaded to Github on 9 July, 2020.
 
 ### Project Title
 Bikeshare Data Project
