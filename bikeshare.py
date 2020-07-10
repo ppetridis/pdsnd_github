@@ -28,12 +28,11 @@ def get_filters():
     month = 'all'
     day = 'all'
     if month_or_day == 'month':
-        while True:
+        months = ['january','february','march','april','may','june']
+        month = ''
+        while month not in months:
             month = input("Which month's data would you like to see? Please choose a month between January and June:\n").lower()
-            months = ['january','february','march','april','may','june']
-            if month in months:
-                break
-            else:
+            if month not in months:
                 print("You may have spelled it wrong or picked a month outside the range. Try again!\n")
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     elif month_or_day == 'day':
