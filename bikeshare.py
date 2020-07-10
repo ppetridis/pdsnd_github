@@ -36,12 +36,11 @@ def get_filters():
                 print("You may have spelled it wrong or picked a month outside the range. Try again!\n")
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     elif month_or_day == 'day':
-        while True:
+        days = ['monday','tuesday','wednesday','thursday','friday','saturday','sunday']
+        day = ''
+        while day not in days:
             day = input("Which day's data would you like to see? Please type the full day name:\n").lower()
-            days = ['monday','tuesday','wednesday','thursday','friday','saturday','sunday']
-            if day in days:
-                break
-            else:
+            if day not in days:
                 print("You may have spelled it wrong or written it incorrectly. Try again!\n")
 
     print (city, ' ', month, ' ', day)
